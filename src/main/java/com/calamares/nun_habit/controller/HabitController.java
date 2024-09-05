@@ -40,4 +40,14 @@ public class HabitController {
         return habitService.listAllHabits();
     }
 
+    @GetMapping("/habits/completed")
+    public List<Habit> getCompletedHabits() {
+        return habitService.listOnlyCompleted();
+    }
+
+    @GetMapping("/habits/todo")
+    public List<Habit> getHabitsToDo() {
+        return habitService.listHabitsTodo();
+    }
+
 }
