@@ -31,8 +31,16 @@ public class HabitService {
                 return habit;
             }
         }
-
         return null;
+    }
+
+    public void printHabitDetails(Long id) {
+        Habit habit = findHabitById(id);
+        if (habit != null) {
+            System.out.println(habit);
+        } else {
+            System.out.println("Habit not found.");
+        }
     }
 
 }
