@@ -43,4 +43,19 @@ public class HabitService {
         }
     }
 
+    public List<Habit> listAllHabits() {
+        return habits;
+    }
+
+    public List<Habit> listOnlyCompleted() {
+        List<Habit> completedHabits = new ArrayList<>();
+
+        for (Habit habit : habits) {
+            if (habit.isCompleted() == true) {
+                completedHabits.add(habit);
+            }
+        }
+        return completedHabits;
+    }
+
 }
