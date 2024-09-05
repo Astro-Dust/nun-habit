@@ -24,4 +24,15 @@ public class HabitService {
 
     }
 
+    public Habit findHabitById(Long id) {
+
+        for (Habit habit : habits) {
+            if (habit.getId().equals(id)) {
+                return habit;
+            }
+        }
+
+        return null;
+    }
+
 }
