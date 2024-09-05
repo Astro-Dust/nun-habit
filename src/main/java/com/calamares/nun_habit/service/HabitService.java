@@ -1,17 +1,20 @@
 package com.calamares.nun_habit.service;
 
 import java.util.List;
+
+import org.springframework.stereotype.Service;
+
 import java.util.ArrayList;
 import com.calamares.nun_habit.model.Habit;
 
 // nessa classe ficam os métodos principais
+@Service
 public class HabitService {
     
     List<Habit> habits = new ArrayList<>();
 
-    public List<Habit> addHabit(Habit habit) {
+    public void addHabit(Habit habit) {
         habits.add(habit);
-        return habits;
     }
 
     public void markAsCompleted(Long id) {
