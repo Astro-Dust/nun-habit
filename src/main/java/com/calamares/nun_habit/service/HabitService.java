@@ -58,4 +58,15 @@ public class HabitService {
         return completedHabits;
     }
 
+    public List<Habit> listHabitsTodo() {
+        List<Habit> habitsToDo = new ArrayList<>();
+
+        for (Habit habit : habits) {
+            if (!habit.isCompleted()) {
+                habitsToDo.add(habit);
+            }
+        }
+        return habitsToDo;
+    }
+
 }
