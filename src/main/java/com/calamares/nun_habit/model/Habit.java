@@ -46,4 +46,9 @@ public class Habit {
         this.completed = completed;
     }
 
+    @Override
+    public String toString() {
+        return getName()+": "+getDescription()+" - Is Completed: "+isCompleted();
+    }
+
 }
